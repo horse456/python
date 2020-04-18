@@ -16,19 +16,18 @@ def drawCircleTurtle(x, y, r) :
 drawCircleTurtle(200, 100, 50)
 t.mainloop()
 
-print("hello, world!")
 
-# 太阳线
-# import turtle as t
-# import time
-# t.color("red","yellow")
-# t.speed(10)
-# t.begin_fill()
-# for x in range(50):
-#     t.forward(200)
-#     t.left(170)
-# end_fill()
-# time.sleep(2)
+太阳线
+import turtle as t
+import time
+t.color("red","yellow")
+t.speed(10)
+t.begin_fill()
+for x in range(50):
+    t.forward(200)
+    t.left(170)
+end_fill()
+time.sleep(2)
 
 #彩虹线
 
