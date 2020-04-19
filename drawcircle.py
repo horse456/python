@@ -1,7 +1,7 @@
 import math
 import turtle as t 
 
-draw the circle using turtle
+# draw the circle using turtle
 def drawCircleTurtle(x, y, r) :
     # move to the start of circle
     t.up()
@@ -16,15 +16,3 @@ def drawCircleTurtle(x, y, r) :
 drawCircleTurtle(200, 100, 50)
 t.mainloop()
 
-
-太阳线
-import turtle as t
-import time
-t.color("red","yellow")
-t.speed(10)
-t.begin_fill()
-for x in range(50):
-    t.forward(200)
-    t.left(170)
-end_fill()
-time.sleep(2)
