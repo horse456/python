@@ -161,7 +161,7 @@ class SpiroAnimator:
         turtle.ontimer(self.update, self.deltaT)
 
     # toggle turtle cursor on and off
-    def toggleTurtle(self):
+    def toggleTurtles(self):
         for spiro in self.spiros:
             if spiro.t.isvisible():
                 spiro.t.hideturtle()
@@ -173,9 +173,9 @@ def saveDrawing():
     # hide the turtle cursor
     turtle.hideturtle()
     # generate unique filenames
-    dateStr = (datetime.now()).strftime("%d%b%y-%H%M%S")
-    filename = 'spiro-' + dateStr
-    print('save drawing to %s.eps/png' % filename)
+    dateStr = (datetime.now()).strftime("%d%b%Y-%H%M%S")
+    fileName = 'spiro-' + dateStr
+    print('save drawing to %s.eps/png' % fileName)
     # get the tkinter canvas
     canvas = turtle.getcanvas()
     # save the drawing as a postscript image
@@ -217,7 +217,7 @@ def main():
 
     # set the title to Spirographs！
     turtle.title("Spirographs!")
-    # add the key handler to save our dawings
+    # add the key handler to save our darwings
     turtle.onkey(saveDrawing, "s")
     # start listening
     turtle.listen()
@@ -236,7 +236,7 @@ def main():
         # create the animator object
         spiroAnim = SpiroAnimator(4)
         # add a key handler to toggle the turtle cursor
-        turtle.onkey(spiroAnim.toggleTurtle, 't')
+        turtle.onkey(spiroAnim.toggleTurtles, 't')
         # add a key handler to restart the animation
         turtle.onkey(spiroAnim.restart, 'space')
 
