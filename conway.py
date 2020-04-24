@@ -35,9 +35,9 @@ def update(frameNum, img, grid, N):
             if grid[i, j] == ON:
                 if (total < 2) or (total > 3):
                     newGrid[i, j] = OFF
-                else:
-                    if total == 3:
-                        newGrid[i, j] = ON
+            else:
+                if total == 3:
+                    newGrid[i, j] = ON
     # update data
     img.set_data(newGrid)
     grid[:] = newGrid[:]
@@ -71,8 +71,7 @@ def main():
     grid = np.array([])
     # check if "glider" demo flag is specified
     if args.glider:
-        # grid = np.zeros(N*N).reshape(N, N)
-        grid = randomGrid(N)
+        grid = np.zeros(N*N).reshape(N, N)
         addGlider(1, 1, grid)
     else:
         # populate grid with random on/off - more off than on
